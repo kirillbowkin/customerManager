@@ -2,7 +2,6 @@ package com.kirill.customerManager.controller;
 
 import com.kirill.customerManager.model.Customer;
 import com.kirill.customerManager.service.CustomerService;
-import com.kirill.customerManager.service.CustomerServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
@@ -16,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class CustomerController {
 
     @Autowired
-    private CustomerServiceImpl customerService;
+    private CustomerService customerService;
 
     @GetMapping("/")
     public String showPage(Model model, @RequestParam(defaultValue = "0") int page){
