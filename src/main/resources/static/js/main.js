@@ -4,7 +4,7 @@ $(document).ready(function () {
         var href = $(this).attr('href');
         var text = $(this).text();
 
-        if(text=='Edit'){
+        if (text == 'Edit') {
             $.get(href, function (customer, status) {
                 $('.updateForm #id').val(customer.id);
                 $('.updateForm #firstName').val(customer.firstName);
@@ -15,7 +15,7 @@ $(document).ready(function () {
 
 
             $('.updateForm #exampleModal').modal();
-        }else{
+        } else {
             $('.updateForm #id').val('');
             $('.updateForm #firstName').val('');
             $('.updateForm #lastName').val('');
@@ -30,7 +30,7 @@ $(document).ready(function () {
         event.preventDefault();
         var href = $(this).attr('href');
 
-        $(' #delRef').attr('href',href);
+        $(' #delRef').attr('href', href);
         $('#deleteModal').modal();
 
     })
